@@ -12,6 +12,9 @@
 <body>
     <div class="calculator_main">
         <h2>League of Legends Essence Calculator</h2>
+
+        <hr class="spacer1">
+
         <div class="info">
             <!-- <p>This is a little tool I made to calculate the amount of blue essences<br /> you will get once the 7th season of League of Legends ends,<br /> since Riot will be merging influence points and blue essences<br /> into only blue essences! -->
         </div>
@@ -19,58 +22,62 @@
 
             Current amount of blue essences:
             <br>
-            <input type="text" name="currentBlueEssence">
+            <input type="text" name="currentBlueEssence" placeholder="e.g. 5120" class="xd">
             <br>
             <br>
 
             Amount of tier 3 Marks:
             <br>
-            <input type="text" name="runesMarks">
+            <input type="text" name="runesMarks" placeholder="(the red ones)" class="xd">
             <br>
             <br>
 
             Amount of tier 3 Seals:
             <br>
-            <input type="text" name="runesSeals">
+            <input type="text" name="runesSeals" placeholder="(the yellow ones)" class="xd">
             <br>
             <br>
 
             Amount of tier 3 Glyphs:
             <br>
-            <input type="text" name="runesGlyphs">
+            <input type="text" name="runesGlyphs" placeholder="(the blue ones)" class="xd">
             <br>
             <br>
 
             Amount of tier 3 Quintessences:
             <br>
-            <input type="text" name="runesQuints">
+            <input type="text" name="runesQuints" placeholder="(the big ones)" class="xd">
             <br>
             <br>
 
             Amount of rune pages bough with IP:
             <br>
-            <input type="text" name="runePages">
+            <input type="text" name="runePages" class="xd">
             <br>
             <br>
 
             Amout of current Influence Points:
             <br>
 
-            <input type="text" name="currentInfluencePoints">
+            <input type="text" name="currentInfluencePoints" class="xd">
             <br>
             <br>
 
-            <input type="button" value="Calculate" onClick="calculate()">
+            <input type="button" value="Calculate" class="calculate_button" onClick="calculate()">
             <br>
             <br>
+
+            <hr class="spacer2">
 
             Total amout of essences you will get after this season ends:
             <br>
             <br>
 
-            <input type="text" name="totalAmount" class="form-control" readonly>
+            <input type="text" name="totalAmount" class="ergebnis" placeholder="0" readonly>
 
         </form>
+
+        <hr class="spacer3">
 
         <div class="footer">
             <p>Created with 🍺 by <a href="https://github.com/4dams/">4dams</a></b>
@@ -101,7 +108,7 @@
             converted_currentInfluencePoints = currentInfluencePoints;
 
             // And add everything to get a final result
-            totalAmount = converted_currentBlueEssence + converted_runesMarks + converted_runesSeals + converted_runesGlyphs + converted_runesQuints + converted_runePages + converted_currentInfluencePoints
+            totalAmount = converted_currentBlueEssence + converted_runesMarks + converted_runesSeals + converted_runesGlyphs + converted_runesQuints + converted_runePages + converted_currentInfluencePoints;
 
             // And let's tell the form what the total amount is
             document.calculator.totalAmount.value = totalAmount;

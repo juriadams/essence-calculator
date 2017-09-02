@@ -68,3 +68,44 @@ a:active {
     color: #000000;
     text-decoration: none;
 }
+
+.spacer1 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.spacer2 {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.spacer3 {
+  margin-top: 15px;
+  margin-bottom: -5px;
+}
+
+.xd {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.ergebnis {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 20px;
+  text-align: center;
+}
+
+.calculate_button {
+  border: 1px solid black;
+  background: transparent;
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 3px;
+
+}
