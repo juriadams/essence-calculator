@@ -65,8 +65,6 @@
 
       function calculate()
         {
-            //var currentBlueEssence, result;
-
           // List of every entry we're gonna receive
           var currentBlueEssence = Number(document.calculator.currentBlueEssence.value);
           var runesMarks = Number(document.calculator.runesMarks.value);
@@ -87,10 +85,11 @@
 
           // And add everything to get a final result
           totalAmount = converted_currentBlueEssence + converted_runesMarks + converted_runesSeals + converted_runesGlyphs + converted_runesQuints + converted_runePages + converted_currentInfluencePoints
-            //var totalAmout = currentBlueEssence * 6.5;
-            //document.getElementById("result").innerHTML = totalAmout;
+
+          // And let's tell the form what the total amount is
           document.calculator.totalAmount.value=totalAmount;
         }
+
     </script>
 
   </body>
