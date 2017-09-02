@@ -2,113 +2,112 @@
 
 <html>
 
-  <head>
+<head>
     <title>LoL Essence Calculator</title>
-    <link rel="shortcut icon" type="image/png" href="calculator_icon.png"/>
+    <link rel="shortcut icon" type="image/png" href="calculator_icon.png" />
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="calculator_main">
-      <h2>League of Legends Essence Calculator</h2>
-      <div class="info">
-        <p>This is a little tool I made to calculate the amount of blue essences<br /> you will get once the 7th season of League of Legends ends,<br /> since Riot will be merging influence points and blue essences<br /> into only blue essences!
-      </div>
-      <form name="calculator">
+        <h2>League of Legends Essence Calculator</h2>
+        <div class="info">
+            <!-- <p>This is a little tool I made to calculate the amount of blue essences<br /> you will get once the 7th season of League of Legends ends,<br /> since Riot will be merging influence points and blue essences<br /> into only blue essences! -->
+        </div>
+        <form name="calculator">
 
-        Current amount of blue essences:
-          <br>
-          <input type="text" name="currentBlueEssence">
-          <br>
-          <br>
+            Current amount of blue essences:
+            <br>
+            <input type="text" name="currentBlueEssence">
+            <br>
+            <br>
 
-        Amount of tier 3 Marks:
-          <br>
-        <input type="text" name="runesMarks">
-          <br>
-          <br>
+            Amount of tier 3 Marks:
+            <br>
+            <input type="text" name="runesMarks">
+            <br>
+            <br>
 
-        Amount of tier 3 Seals:
-          <br>
-        <input type="text" name="runesSeals">
-          <br>
-          <br>
+            Amount of tier 3 Seals:
+            <br>
+            <input type="text" name="runesSeals">
+            <br>
+            <br>
 
-        Amount of tier 3 Glyphs:
-          <br>
-        <input type="text" name="runesGlyphs">
-          <br>
-          <br>
+            Amount of tier 3 Glyphs:
+            <br>
+            <input type="text" name="runesGlyphs">
+            <br>
+            <br>
 
-        Amount of tier 3 Quintessences:
-          <br>
-        <input type="text" name="runesQuints">
-          <br>
-          <br>
+            Amount of tier 3 Quintessences:
+            <br>
+            <input type="text" name="runesQuints">
+            <br>
+            <br>
 
-        Amount of rune pages bough with IP:
-          <br>
-        <input type="text" name="runePages">
-          <br>
-          <br>
+            Amount of rune pages bough with IP:
+            <br>
+            <input type="text" name="runePages">
+            <br>
+            <br>
 
-        Amout of current Influence Points:
-          <br>
-        <input type="text" name="currentInfluencePoints">
-          <br>
-          <br>
+            Amout of current Influence Points:
+            <br>
 
-        <input type="button" value="Calculate" onClick="calculate()">
-          <br>
-          <br>
+            <input type="text" name="currentInfluencePoints">
+            <br>
+            <br>
 
-        Total amout of essences you will get after this season ends:
-          <br>
-        <input type="text" name="totalAmount">
+            <input type="button" value="Calculate" onClick="calculate()">
+            <br>
+            <br>
 
-      </form>
+            Total amout of essences you will get after this season ends:
+            <br>
+            <br>
 
-      <div class="footer">
-        <p>Created with 🍺 by <a href="https://github.com/4dams/">4dams</a></b>
-      </div>
+            <input type="text" name="totalAmount" class="form-control" readonly>
+
+        </form>
+
+        <div class="footer">
+            <p>Created with 🍺 by <a href="https://github.com/4dams/">4dams</a></b>
+        </div>
 
     </div>
 
     <div class="background-overlay"></div>
 
     <script>
+        function calculate() {
+            // List of every entry we're gonna receive
+            var currentBlueEssence = Number(document.calculator.currentBlueEssence.value);
+            var runesMarks = Number(document.calculator.runesMarks.value);
+            var runesSeals = Number(document.calculator.runesSeals.value);
+            var runesGlyphs = Number(document.calculator.runesGlyphs.value);
+            var runesQuints = Number(document.calculator.runesQuints.value);
+            var runePages = Number(document.calculator.runePages.value);
+            var currentInfluencePoints = Number(document.calculator.runePages.value);
 
-      function calculate()
-        {
-          // List of every entry we're gonna receive
-          var currentBlueEssence = Number(document.calculator.currentBlueEssence.value);
-          var runesMarks = Number(document.calculator.runesMarks.value);
-          var runesSeals = Number(document.calculator.runesSeals.value);
-          var runesGlyphs = Number(document.calculator.runesGlyphs.value);
-          var runesQuints = Number(document.calculator.runesQuints.value);
-          var runePages = Number(document.calculator.runePages.value);
-          var currentInfluencePoints = Number(document.calculator.runePages.value);
+            // Now we calculate stuff
+            converted_currentBlueEssence = currentBlueEssence * 6.5;
+            converted_runesMarks = runesMarks * 100;
+            converted_runesSeals = runesSeals * 100;
+            converted_runesGlyphs = runesGlyphs * 100;
+            converted_runesQuints = runesQuints * 300;
+            converted_runePages = runePages * 1500;
+            converted_currentInfluencePoints = currentInfluencePoints;
 
-          // Now we calculate stuff
-          converted_currentBlueEssence = currentBlueEssence * 6.5;
-          converted_runesMarks = runesMarks * 100;
-          converted_runesSeals = runesSeals * 100;
-          converted_runesGlyphs = runesGlyphs * 100;
-          converted_runesQuints = runesQuints * 300;
-          converted_runePages = runePages * 1500;
-          converted_currentInfluencePoints = currentInfluencePoints;
+            // And add everything to get a final result
+            totalAmount = converted_currentBlueEssence + converted_runesMarks + converted_runesSeals + converted_runesGlyphs + converted_runesQuints + converted_runePages + converted_currentInfluencePoints
 
-          // And add everything to get a final result
-          totalAmount = converted_currentBlueEssence + converted_runesMarks + converted_runesSeals + converted_runesGlyphs + converted_runesQuints + converted_runePages + converted_currentInfluencePoints
-
-          // And let's tell the form what the total amount is
-          document.calculator.totalAmount.value=totalAmount;
+            // And let's tell the form what the total amount is
+            document.calculator.totalAmount.value = totalAmount;
         }
-
     </script>
 
-  </body>
+</body>
 
 </html>
