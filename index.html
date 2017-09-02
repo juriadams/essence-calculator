@@ -9,61 +9,62 @@
   </head>
 
   <body>
-    <h2>4dams' Essence Calculator</h2>
+    <div class="calculator_main">
+      <h2>4dams' Essence Calculator</h2>
+      <form name="calculator">
 
-    <form name="calculator">
+        Current amount of blue essences:
+          <br>
+          <input type="text" name="currentBlueEssence">
+          <br>
+          <br>
 
-      Current amount of blue essences:
-        <br>
-        <input type="text" name="currentBlueEssence">
-        <br>
-        <br>
+        Amount of tier 3 Marks:
+          <br>
+        <input type="text" name="runesMarks">
+          <br>
+          <br>
 
-      Amount of tier 3 Marks:
-        <br>
-      <input type="text" name="runesMarks">
-        <br>
-        <br>
+        Amount of tier 3 Seals:
+          <br>
+        <input type="text" name="runesSeals">
+          <br>
+          <br>
 
-      Amount of tier 3 Seals:
-        <br>
-      <input type="text" name="runesSeals">
-        <br>
-        <br>
+        Amount of tier 3 Glyphs:
+          <br>
+        <input type="text" name="runesGlyphs">
+          <br>
+          <br>
 
-      Amount of tier 3 Glyphs:
-        <br>
-      <input type="text" name="runesGlyphs">
-        <br>
-        <br>
+        Amount of tier 3 Quintessences:
+          <br>
+        <input type="text" name="runesQuints">
+          <br>
+          <br>
 
-      Amount of tier 3 Quintessences:
-        <br>
-      <input type="text" name="runesQuints">
-        <br>
-        <br>
+        Amount of rune pages bough with IP:
+          <br>
+        <input type="text" name="runePages">
+          <br>
+          <br>
 
-      Amount of rune pages bough with IP:
-        <br>
-      <input type="text" name="runePages">
-        <br>
-        <br>
+        Amout of current Influence Points:
+          <br>
+        <input type="text" name="currentInfluencePoints">
+          <br>
+          <br>
 
-      Amout of current Influence Points:
-        <br>
-      <input type="text" name="currentInfluencePoints">
-        <br>
-        <br>
+        <input type="button" value="Calculate" onClick="calculate()">
+          <br>
+          <br>
 
-      <input type="button" value="Calculate" onClick="calculate()">
-        <br>
-        <br>
+        Total amout of essences you will get after this season ends:
+          <br>
+        <input type="text" name="totalAmount">
 
-      Total amout of essences you will get after this season ends:
-        <br>
-      <input type="text" name="totalAmount">
-
-    </form>
+      </form>
+    </div>
 
     <!-- <p id="result"></p> -->
 
