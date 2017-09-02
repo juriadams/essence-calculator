@@ -1,0 +1,116 @@
+html {
+  background: url(background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.calculator_main {
+  background-color: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  -webkit-box-shadow: 0px 2px 55px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 2px 55px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 2px 55px 0px rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.info {
+  font-family: 'Roboto:300', sans-serif;
+  font-size: 100%;
+}
+
+.background-overlay {
+    z-index: -50;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #171717;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    animation: blinker 10s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0.8; }
+}
+
+.footer {
+  font-size: 85%;
+  margin-top: 30px;
+}
+
+a:link {
+    color: #000000;
+    border-bottom: 1px dotted #757575;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000000;
+    border-bottom: 1px dotted #757575;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+.form-control {
+  height: 36px;
+  padding: 7px 0;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+.form-control,
+.form-group .form-control {
+  border: 0;
+  background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
+  background-size: 0 2px, 100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom, center calc(100% - 1px);
+  background-color: transparent;
+  transition: background 0s ease-out;
+  float: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-weight: 400;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group.is-focused .form-control {
+  outline: none;
+  background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
+  background-size: 100% 2px, 100% 1px;
+  box-shadow: none;
+  transition-duration: 0.3s;
+}
+
+.form-control {
+  margin-bottom: 7px;
+}
+
+.form-group {
+  padding-bottom: 7px;
+  margin: 27px 0 0 0;
+}
+.form-group .form-control {
+  margin-bottom: 7px;
+}
